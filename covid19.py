@@ -61,7 +61,7 @@ def choropleth_coronavirus(csv_file):
     fig.data[0].customdata = np.stack((dfs['European Region'],dfs['total confirmed'], 
                                        dfs['total deaths'], dfs['transmission']), axis=-1)
     fig.data[0].hovertemplate =  "<b>%{customdata[0]}</b>"+\
-                             "<br><b>Total cases confirmed </b>: %{customdata[1]}"+\
+                             "<br><b>Total confirmed cases</b>: %{customdata[1]}"+\
                              "<br><b>Total deaths </b>: %{customdata[2]}"+\
                              "<br><b>Transmission </b>: %{customdata[3]}<extra></extra>"
     return fig
